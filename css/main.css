@@ -34,6 +34,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Quattrocento Sans", sans-serif;
   color: #333;
 }
+h3{
+  margin:0;
+}
 
 a {
   text-decoration: underline;
@@ -113,18 +116,6 @@ blockquote p {
   width: 760px;
 }
 
-@media (max-width: 1366px) {
-  .container {
-    width: 45vw;
-  }
-}
-
-
-@media (max-width: 48em) {
-  .container {
-    width: 75vw;
-  }
-}
 
 /*
   Masthead
@@ -137,13 +128,10 @@ blockquote p {
   background: url("../images/sierra.png") no-repeat;
   background-size: cover;
 }
-#masthead {
-    background-color: transparent;
-}
+
 .masthead {
 
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
   margin-bottom: 4rem;
   font-family: "Quattrocento Sans", sans-serif;
 }
@@ -152,6 +140,10 @@ blockquote p {
   color:black;
 }
 
+.masthead-title{
+    margin:26px 0;
+  }
+
 .masthead-title a {
   font-size: 2rem;
   text-decoration: none;
@@ -159,6 +151,7 @@ blockquote p {
 }
 
 .masthead-subtitle {
+  margin-right: 10px;
   color: #505050;
 }
 
@@ -209,6 +202,11 @@ blockquote p {
 .related-posts a {
   text-decoration: none;
 }
+
+
+
+
+
 
 /*
   Pagination
@@ -495,4 +493,63 @@ pre {
 
 .fa-codepen:hover {
 	color: black;
+}
+
+
+
+@media (max-width: 1366px) {
+  .container {
+    width: 88vw;
+  }
+  .post-container {
+    margin-bottom: 2rem;
+    padding: 1rem 1rem;
+  }
+  .posts {
+    margin-bottom: 3rem;
+  }
+  .header-background{
+    height: 150px;
+  }
+/*  .masthead-title{
+    margin:20px 0;
+  }*/
+  .menu {
+    padding-top: 0.4rem;
+  }
+  .menu-content {
+    float: left;
+    padding: 10px 0 0 20px;
+  }
+}
+
+
+@media (max-width: 48em) {
+  .container {
+    width: 96%;
+  }
+  .post-container {
+    margin-bottom: 1rem;
+    padding: 1rem 0.3rem 0.5rem 0.3rem;
+  }
+  .posts {
+    margin-bottom: 2rem;
+  }
+  .header-background{
+    height: 120px;
+  }
+  .masthead-title{
+    margin:4px 0;
+  }
+  .menu {
+    padding-top: 0rem;
+  }
+  .menu-content {
+    float: left;
+    padding: 10px 0 0 10px;
+  }
+  .social-icons {
+    float: left;
+    padding: 0;
+  }
 }
