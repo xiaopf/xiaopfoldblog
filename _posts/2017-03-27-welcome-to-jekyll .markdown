@@ -3,6 +3,9 @@ layout: post
 title:  "nodejs+express+mongoDB!"
 date:   2017-03-27 16:49:20 +0800
 categories: jekyll update
+comments: true
+
+
 ---
 # nodejs+express+mongoDB建站总结
 ## 一、使用教程
