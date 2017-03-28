@@ -94,7 +94,7 @@ blockquote:before {
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
-  vertical-align: -0.4em;
+ /* vertical-align: -0.4em;*/
 }
 blockquote p {
   display: inline;
@@ -166,9 +166,10 @@ blockquote p {
 }
 
 .posts {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   padding: 0px;
   list-style: none;
+  border-bottom: 1px dashed grey;
 }
 
 .posts p a:hover {
@@ -249,15 +250,16 @@ blockquote p {
   margin: 2rem;
 }
 
-.footer i{
+/*.footer i{
   font-size:26px;
-}
+}*/
 
 .footer a {
   color: #999;
   padding: 10px;
   margin:10px;
   text-decoration: none;
+  font-size:26px;
 }
 
 .footer a:hover {
@@ -276,6 +278,13 @@ blockquote p {
   padding-top: 1rem;
   display: block;
 }
+
+.menu:after {
+  content:'';
+  display: table;
+  clear:both;
+}
+
 
 .menu-content {
   float: left;
@@ -298,18 +307,12 @@ blockquote p {
   margin:10px;
 }
 
-/*.social-icons i{
-  font-size:26px;
-}*/
 
 @media (max-width: 30em) {
   .social-icons {
     float: left;
     padding-top: 0.5rem;
   }
-  /*.social-icons i{
-    font-size:24px;
-  }*/
 }
 
 
@@ -519,37 +522,50 @@ pre {
   }
   .menu-content {
     float: left;
-    padding: 10px 0 0 20px;
+    padding: 6px 0 0 20px;
   }
 }
 
 
-@media (max-width: 48em) {
+@media (max-width: 60em) {
   .container {
-    width: 96%;
+    width: 100%;
   }
   .post-container {
     margin-bottom: 1rem;
-    padding: 1rem 0.3rem 0.5rem 0.3rem;
+    padding: 1rem 1.2rem 0.5rem 1.2rem;
   }
   .posts {
     margin-bottom: 2rem;
+    border-bottom: 1px dashed grey;
   }
   .header-background{
     height: 120px;
   }
   .masthead-title{
-    margin:4px 0;
+    margin:16px 10px;
   }
   .menu {
     padding-top: 0rem;
   }
   .menu-content {
     float: left;
-    padding: 10px 0 0 10px;
+    padding: 6px 0 0 10px;
+    margin:0;
+  }
+  .menu-content a{
+    font-size: 1.2rem;
   }
   .social-icons {
-    float: left;
+    float: right;
     padding: 0;
+  }
+  .social-icons a,.footer a{
+    font-size: 1.2rem;
+    margin: 6px;
+    padding: 0px;
+  }
+  .post-date a{
+    font-size:0.5rem;
   }
 }
