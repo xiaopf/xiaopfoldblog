@@ -3,7 +3,6 @@
 */
 
 body {
-  background-color: #e4bdb6;
   margin: 0;
   padding: 0;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
@@ -60,26 +59,6 @@ img {
   border-radius: 5px;
 }
 
-/*
-  Blockquote
-*/
-
-/*blockquote {
-  padding: 0rem 1rem;
-  margin: .8rem 0;
-  color: #999;
-  border-left: 0.25rem solid #ccc;
-}
-
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-@media (min-width: 30em) {
-  blockquote {
-    padding-right: 5rem;
-    padding-left: 1.25rem;
-  }
-}*/
 
 blockquote {
   border-left: 0.25rem solid #ccc;
@@ -124,8 +103,8 @@ blockquote p {
 .header-background{
   margin:0;
   padding: 0;
-  height: 120px;
-  background: url("../images/sierra.png") no-repeat;
+  height:470px;
+  background: url("../images/mountains-teaser.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -338,12 +317,14 @@ pre {
     padding: 8px 12px;
     overflow-x: auto;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+
 }
+pre >code {
+      border: 0;
+      padding-right: 0;
+      padding-left: 0;
+  }
+
 
 .highlight .lineno {
   color: #aaa;
@@ -512,11 +493,8 @@ pre {
     margin-bottom: 3rem;
   }
   .header-background{
-    height: 150px;
+    height: auto;
   }
-/*  .masthead-title{
-    margin:20px 0;
-  }*/
   .menu {
     padding-top: 0.4rem;
   }
@@ -540,7 +518,7 @@ pre {
     border-bottom: 1px dashed grey;
   }
   .header-background{
-    height: 120px;
+
   }
   .masthead-title{
     margin:16px 10px;
