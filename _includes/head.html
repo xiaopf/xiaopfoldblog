@@ -15,12 +15,56 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-  <script type="text/javascript" async
+  <!-- <script type="text/javascript" async
     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+  </script> -->
 
   {% include google_analytics.html %}
+  <script>
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'onorientationchange' in window ? 'onorientationchange' : 'resize',
+        recalc = function () {
+          var innerWidth = window.innerWidth;
+          if (!innerWidth) return;
+          if(innerWidth > 800){
+            docEl.style.fontSize = '18px';
+          }else{
+            docEl.style.fontSize = 40 * (innerWidth / 800) + 'px';
+          }
+        };
 
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+  </script>
+  <script>
+    window.onload = function () {
+      let menu = document.getElementById('menu');
+      let social = document.getElementById('social');
+
+      let menuList = document.getElementById('menuList');
+      let socialList = document.getElementById('socialList');
+
+      
+      menu.onclick = function (e) {
+        menuList.style.display =  menuList.style.display === "block" ? "none" : "block";
+        socialList.style.display = 'none';
+        e.stopPropagation();
+      }
+      social.onclick = function (e) {
+        socialList.style.display =  socialList.style.display === "block" ? "none" : "block";
+        menuList.style.display = 'none';
+        e.stopPropagation();
+      }
+
+      document.onclick =  function (e) {
+        socialList.style.display = 'none';
+        menuList.style.display = 'none';
+      }
+    }
+  </script>
 </head>
