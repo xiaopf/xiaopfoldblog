@@ -116,9 +116,42 @@ img {
   width: 760px;
 }
 .post-container {
-  width:100%;
-  margin: 0 auto 50px;
-  padding: 30px;
+  padding: 30px 30px 0 30px;
+}
+.post-container h1,
+.post-container h2,
+.post-container h3,
+.post-container h4,
+.post-container h5 {
+  padding: 10px 0;
+  color:#333;
+  display: block;
+  font-weight: bold;
+}
+.post-container h1{
+  font-size:28px;
+  line-height: 38px;
+}
+.post-container h2{
+  font-size:24px;
+  line-height: 34px;
+}
+.post-container h3{
+  font-size:20px;
+  line-height: 30px;
+}
+.post-container h4{
+  font-size:16px;
+  line-height: 26px;
+}
+.post-container h5{
+  font-size:12px;
+  line-height: 22px;
+}
+
+.post-container p {
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .posts {
@@ -127,16 +160,9 @@ img {
   list-style: none;
   border-bottom: 1px dashed grey;
 }
-
 .posts p a:hover {
   color: #009ad6;
 }
-
-.posts h1 a{
-  padding: 16px 0;
-  display:block;
-}
-
 .posts h1 a:hover {
   color: #009ad6;
 }
@@ -156,22 +182,51 @@ img {
   }
   .post-container {
     width: 94%;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1rem;
     padding: 0;
   }
-  .posts {
-    margin-bottom: 1rem;
+  .post-container h1,
+  .post-container h2,
+  .post-container h3,
+  .post-container h4,
+  .post-container h5 {
+    padding: 0.25rem 0;
   }
-  .posts p {
+
+  .post-container h1 {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+
+  .post-container h2 {
+    font-size: 1em;
+    line-height: 1.5rem;
+  }
+
+  .post-container h3 {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  .post-container h4 {
     font-size: 0.8rem;
     line-height: 1.3rem;
   }
-  .posts h1 a {
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
-    line-height: 1.5rem;
-    display: block;
+
+  .post-container h5 {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
   }
+
+  .post-container p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .posts {
+    margin-bottom: 1rem;
+  }
+
   .post-date {
     margin-bottom: 0.6rem;
     font-size: 0.6rem;
@@ -201,6 +256,7 @@ img {
   overflow: hidden;
   font-family: 'Quattrocento Sans', sans-serif;
   text-align: center;
+  margin:0 0 30px 0;
 }
 
 .pagination a {
@@ -216,12 +272,30 @@ img {
   font-weight: bold;
 }
 
+.pagination-button:first-child{
+  float:left;
+}
+.pagination-button:last-child{
+  float:right;
+}
+
+
 .pagination-active {
   color: black;
 }
 
 .pagination-active:hover {
   background-color: #e0e0e0;
+}
+
+@media (max-width: 800px) {
+  .pagination {
+    margin: 0 0 0.6rem 0;
+  }
+  .pagination-button {
+    padding: 0.4rem 1.4rem;
+    font-size: 0.7rem;
+  }
 }
 
 /*
@@ -231,20 +305,52 @@ img {
 .footer {
   color: #999;
   text-align: center;
-  margin: 2rem;
+  margin:0 0 20px 0;
 }
 
 
 .footer a {
   color: #999;
-  padding: 10px;
-  margin:10px;
+  padding:0 10px;
   text-decoration: none;
-  font-size:26px;
+  font-size:24px;
+}
+
+.footer-text {
+  margin: 15px 0;
+  font-size: 0;
+}
+
+.footer-text a{
+  display: inline-block;
+  vertical-align: center;
+  font-size: 22px;
+  height:24px;
+  line-height: 24px;
+  border-right:1px solid #999;
+}
+.footer-text a:last-child {
+  border:none;
 }
 
 .footer a:hover {
   color: #333;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    margin: 0 0 1rem 0;
+  }
+  .footer-text {
+    margin:0 0 0.9rem 0;
+  }
+  .footer-text a {
+    border:none;
+    display: block;
+    line-height: 1.4rem;
+    height: 1.4rem;
+    font-size: 0.9rem
+  }
 }
 
 
@@ -354,6 +460,19 @@ img {
 /*
   Code
 */
+.container .post-container .content-title {
+  height:auto;
+  width:100%;
+  font-size: 36px;
+  line-height: 52px;
+}
+
+@media (max-width: 800px) {
+  .container .post-container .content-title {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+}
 
 pre,
 code {
@@ -379,8 +498,11 @@ pre >code {
       padding-left: 0;
   }
 
-
+.highlight{
+  background: #333;
+}
 .highlight .lineno {
+  background: #333;
   color: #aaa;
   display:inline-block;
   padding: 0 5px;
@@ -388,6 +510,7 @@ pre >code {
 }
 
 .highlight pre code {
+    background: #333;
   display: block;
   white-space: pre;
   overflow-x: auto;
