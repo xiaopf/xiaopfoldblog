@@ -6,7 +6,24 @@ body {
   margin: 0;
   padding: 0;
   height:100%;
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: -apple-system,
+                BlinkMacSystemFont,
+                "Helvetica Neue",
+                Arial,
+                "PingFang SC",
+                "Hiragino Sans GB",
+                STHeiti,
+                "Microsoft YaHei",
+                "Microsoft JhengHei",
+                "Source Han Sans SC",
+                "Noto Sans CJK SC",
+                "Source Han Sans CN",
+                "Noto Sans SC",
+                "Source Han Sans TC",
+                "Noto Sans CJK TC",
+                "WenQuanYi Micro Hei",
+                SimSun,
+                sans-serif;
   font-size: 18px;
   color: #fff;
   line-height: 1.75rem;
@@ -16,7 +33,6 @@ a {
   color: #333;
 }
 h1, h2, h3, h4, h5, h6,p,span {
-  font-family: "Quattrocento Sans", sans-serif;
   color: #333;
   margin:0;
   padding: 0;
@@ -45,11 +61,6 @@ img {
   height: 460px;
   background-color: rgba(0, 0, 0, 0.4)
 }
-
-.masthead {
-  font-family: "Quattrocento Sans", sans-serif;
-}
-
 
 .masthead-title {
   margin: 0 auto;
@@ -116,7 +127,7 @@ img {
   width: 760px;
 }
 .post-container {
-  padding: 30px 30px 0 30px;
+  padding: 30px 0 0 0;
 }
 .post-container h1,
 .post-container h2,
@@ -160,6 +171,13 @@ img {
   list-style: none;
   border-bottom: 1px dashed grey;
 }
+
+.post-container .posts p {
+  color: #a3a3a3;
+  font-style: italic;
+}
+
+
 .posts p a:hover {
   color: #009ad6;
 }
@@ -167,13 +185,36 @@ img {
   color: #009ad6;
 }
 
-.post-date {
-  display: block;
-  margin-bottom: 12px;
+.post-bottom-date {
+  display:block;
+  margin: 15px 0;
+  font-style: initial;
   color: #9a9a9a;
   font-family: 'Quattrocento Sans', sans-serif;
   font-size:16px;
 }
+.post-share-msg {
+  display: block;
+  margin: 15px 0;
+  font-style: initial;
+  color: #333;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 16px;
+}
+.post-share-msg h1{
+  display:inline-block;
+  vertical-align: center;
+}
+.sharing-icons {
+  display: inline-block;
+  vertical-align: center;
+  font-size: 16px;
+}
+.sharing-icons a{
+  font-size: 20px;
+  margin:0 10px;
+}
+
 
 @media (max-width: 800px) {
   .container{
@@ -227,25 +268,39 @@ img {
     margin-bottom: 1rem;
   }
 
-  .post-date {
-    margin-bottom: 0.6rem;
-    font-size: 0.6rem;
+  .post-bottom-date {
+    margin: 0.6rem 0 0 0;
+    font-size:0.8rem;
+  }
+
+  .post-share-msg {
+    margin: 0.6rem 0;
+    font-size: 0.8rem;
+  }
+
+  .sharing-icons {
+    font-size: 0.65rem;
+  }
+
+  .sharing-icons a {
+    font-size: 1rem;
+    margin: 0 0.5rem;
   }
 
 }
 
-.related {
+/* .related {
   padding-bottom: 2rem;
 }
 
 .related-posts {
   padding-left: 0px;
   list-style: none;
-}
+} */
 
-.related-posts a {
+/* .related-posts a {
   text-decoration: none;
-}
+} */
 
 
 /*
@@ -305,7 +360,7 @@ img {
 .footer {
   color: #999;
   text-align: center;
-  margin:0 0 20px 0;
+  margin:10px 0 20px 0;
 }
 
 
@@ -342,7 +397,7 @@ img {
     margin: 0 0 1rem 0;
   }
   .footer-text {
-    margin:0 0 0.9rem 0;
+    margin:0.2rem 0 0.9rem 0;
   }
   .footer-text a {
     border:none;
