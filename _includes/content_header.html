@@ -1,0 +1,32 @@
+<header class="masthead">
+    <div class="menu">
+        <div class="menu-content-btn" id="menu">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="back-up-btn" id="backUp">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i>
+        </div>
+        <div class="menu-content" id="menuList">
+            <a class="element" href="/">Home</a>
+            {% for link in site.navigation %}{% assign current = nil %}{% if page.url contains link.url %}{% assign current = 'current' %}{% endif %}
+            <a class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}"
+                href="{{ site.github.url }}/menu{{ link.url }}">{{ link.title }}</a>
+            {% endfor %}
+        </div>
+  </div>
+  <h3 class="masthead-content-title">
+    {{ page.title }}
+  </h3>
+  <span class="post-bottom-date">
+      Written on
+      {% assign d = page.date | date: "%-d"  %}
+      {{ page.date | date: "%B" }}
+      {% case d %}
+      {% when '1' or '21' or '31' %}{{ d }}st
+      {% when '2' or '22' %}{{ d }}nd
+      {% when '3' or '23' %}{{ d }}rd
+      {% else %}{{ d }}th{% endcase %},
+      {{ page.date | date: "%Y" }}
+      by {{ site.author.name }}
+  </span>
+</header>

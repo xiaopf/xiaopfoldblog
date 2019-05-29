@@ -5,16 +5,19 @@
 
 <body>
 
-	<div class="header-background"> 
-        <div class = "header-mask">
+	<div class="header-background">
+	    <div class="header-mask">
+            <div class="pc">
                 {% include header.html %}
-        </div>
+            </div>
+
+            <div class="mobile">
+                {% include content_header.html %}
+            </div>
+	    </div>
 	</div>
 
-
-
     <div class="container">
-
 	    <div class="post-container">
 	      {{ content }}
 	    </div>

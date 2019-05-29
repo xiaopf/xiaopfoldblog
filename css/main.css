@@ -70,7 +70,7 @@ img {
   padding: 90px 0 0 0;
 }
 
-.masthead-title a {
+.masthead-title p {
   height: 100%;
   display: block;
   font-size: 90px;
@@ -101,7 +101,7 @@ img {
     padding: 2.4rem 0 0 0;
   }
 
-  .masthead-title a {
+  .masthead-title p {
     height: 100%;
     display: block;
     font-size: 2.2rem;
@@ -185,17 +185,18 @@ img {
   color: #009ad6;
 }
 
+.post-date,
 .post-bottom-date {
   display:block;
-  margin: 15px 0;
-  font-style: initial;
+  margin: 5px 0;
+  font-style: italic;
   color: #9a9a9a;
   font-family: 'Quattrocento Sans', sans-serif;
   font-size:16px;
 }
 .post-share-msg {
   display: block;
-  margin: 15px 0;
+  margin: 0 0 15px 0;
   font-style: initial;
   color: #333;
   font-family: 'Quattrocento Sans', sans-serif;
@@ -267,14 +268,14 @@ img {
   .posts {
     margin-bottom: 1rem;
   }
-
+  .post-date,
   .post-bottom-date {
-    margin: 0.6rem 0 0 0;
+    margin: 0.3rem 0 0 0;
     font-size:0.8rem;
   }
 
   .post-share-msg {
-    margin: 0.6rem 0;
+    margin:0 0 0.6rem 0;
     font-size: 0.8rem;
   }
 
@@ -433,7 +434,7 @@ img {
 
 
 .menu-content {
-  float: left;
+  float: right;
   font-size: 0;
 }
 
@@ -447,7 +448,7 @@ img {
 }
 
 .social-icons {
-  float: right;
+  float: left;
   font-size: 0;
 }
 
@@ -469,7 +470,7 @@ img {
     background:#fff;
     width:5rem;
     height:auto;
-    left: 2.2rem;
+    right: 2.2rem;
     top:1.25rem;
   }
   .social-icons{
@@ -477,7 +478,7 @@ img {
   }
   .menu-content-btn {
     display: block;
-    float: left;
+    float: right;
     font-size:1.2rem;
     padding: 0.6rem;
     color: #fff;
@@ -485,7 +486,7 @@ img {
 
   .social-icons-btn {
     display: block;
-    float: right;
+    float: left;
     font-size:1.2rem;
     padding: 0.6rem;
     color: #fff;
@@ -570,4 +571,78 @@ pre >code {
   white-space: pre;
   overflow-x: auto;
   word-wrap: normal;
+}
+
+
+
+/* post detail content header */
+.pc{
+    display: block;
+    
+}
+.mobile {
+    display: none;
+}
+
+.content_header .menu-content-btn {
+    float:right;
+}
+.content_header .back-up-btn {
+    float:left;
+}
+
+.content_header .menu-content-btn i {
+    color:#333;
+}
+.content_header .back-up-btn i {
+    color:#333;
+}
+
+@media (max-width: 800px) {
+    .pc {
+        display: none!important;
+    }
+    .mobile {
+        display: block;
+    }
+
+    .mobile .post-bottom-date{
+        width: 86%;
+        margin:1.5rem auto 0;
+        color:#fff;
+    }
+    .content_header .menu-content {
+        display: none;
+        position: absolute;
+        background: #fff;
+        width: 5rem;
+        height: auto;
+        /* left: 12.8rem; */
+        top: 1.25rem;
+        border:1px solid #333;
+    }
+    .back-up-btn {
+        display: block;
+        float: left;
+        font-size: 1.2rem;
+        padding: 0.6rem;
+        color: #fff;
+    }
+
+    .back-up-btn a {
+        display: inline-block;
+        font-size: 1.1rem;
+        padding: 0.6rem;
+    }
+
+    .masthead-content-title {
+        text-align: left;
+        width: 86%;
+        margin:0 auto;
+        white-space: space break-all;
+        color: #fff;
+        line-height:1.6rem;
+        font-size: 1.2rem;
+        padding-top: 2.2rem;
+    }
 }

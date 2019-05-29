@@ -1,10 +1,23 @@
 ---
-layout: default
+layout: content
 ---
 
-<h1 class="content-title">
+<h1 class="content-title pc">
   {{ page.title }}
 </h1>
+
+<span class="post-bottom-date pc">
+  Written on
+  {% assign d = page.date | date: "%-d"  %}
+  {{ page.date | date: "%B" }}
+  {% case d %}
+  {% when '1' or '21' or '31' %}{{ d }}st
+  {% when '2' or '22' %}{{ d }}nd
+  {% when '3' or '23' %}{{ d }}rd
+  {% else %}{{ d }}th{% endcase %},
+  {{ page.date | date: "%Y" }}
+  by {{ site.author.name }}
+</span>
 
 {% if page.image.feature %}
   <img src="{{ site.github.url }}/images/{{ page.image.feature }}">
@@ -12,18 +25,6 @@ layout: default
 
 {{ content }}
 
-<span class="post-bottom-date">
-  Written on
-  {% assign d = page.date | date: "%-d"  %}
-  {{ page.date | date: "%B" }}
-  {% case d %}
-    {% when '1' or '21' or '31' %}{{ d }}st
-    {% when '2' or '22' %}{{ d }}nd
-    {% when '3' or '23' %}{{ d }}rd
-    {% else %}{{ d }}th{% endcase %},
-  {{ page.date | date: "%Y" }}
-  by {{ site.author.name }}
-</span>
 <div class="container">
   {% include social-sharing.html %}
   <!-- {% include related-posts.html %} -->

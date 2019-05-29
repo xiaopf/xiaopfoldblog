@@ -45,7 +45,7 @@
     window.onload = function () {
       let menu = document.getElementById('menu');
       let social = document.getElementById('social');
-
+      let backUp = document.getElementById('backUp');
       let menuList = document.getElementById('menuList');
       let socialList = document.getElementById('socialList');
 
@@ -64,6 +64,10 @@
       document.onclick =  function (e) {
         socialList.style.display = 'none';
         menuList.style.display = 'none';
+      }
+
+      backUp.onclick = function (e) {
+          window.history.go(-1)
       }
     }
   </script>
