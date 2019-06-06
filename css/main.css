@@ -164,7 +164,11 @@ img {
   font-size: 18px;
   line-height: 30px;
 }
-
+.post-container li {
+    font-size: 18px;
+    line-height: 30px;
+    color:#333;
+}
 .posts {
   margin-bottom: 30px;
   padding: 0px;
@@ -261,6 +265,10 @@ img {
   }
 
   .post-container p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+  .post-container li {
     font-size: 0.8rem;
     line-height: 1.5rem;
   }
